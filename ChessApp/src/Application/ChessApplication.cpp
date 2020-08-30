@@ -2,7 +2,10 @@
 
 ChessApp::ChessApp()
 {
+	if (!glewInit())
+	{
 
+	}
 }
 
 ChessApp::~ChessApp()

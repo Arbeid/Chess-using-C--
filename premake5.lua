@@ -7,6 +7,21 @@ workspace "ChessC++"
    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+   includedirs "Vendor"
+
+   libdirs
+   {
+			"Vendor/GLEW",
+			"Vendor/GLFW"
+   }
+
+   links
+   {
+		  "opengl32.lib",
+		  "glew32s.lib",
+		  "glfw3.lib"
+   }
+
    startproject "ChessGame"
 
    project "ChessApp"
@@ -46,7 +61,7 @@ workspace "ChessC++"
 	includedirs
 	{
 		"ChessApp/src",
-		"%{prj.name}/src"
+		"%{prj.name}/src",
 	}
 
 	links
