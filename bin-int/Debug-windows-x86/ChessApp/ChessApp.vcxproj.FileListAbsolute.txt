@@ -1,2 +1,0 @@
-D:\Dev-C\Projects\Chess-using-C-\bin\Debug-windows-x86\ChessApp\ChessApp.pdb
-D:\Dev-C\Projects\Chess-using-C-\bin-int\Debug-windows-x86\ChessApp\ChessApp.pdb
