@@ -1,8 +1,8 @@
 #pragma once
-#define GLEW_STATIC
-
 #include <GLEW\glew.h>
 #include <GLFW\glfw3.h>
+
+#include <iostream>
 
 class ChessApp
 {
@@ -12,7 +12,11 @@ public:
 
 	void Run();
 	virtual void Procedure() = 0;
+
+	GLFWwindow* GetWindow() { return m_Window; }
 private:
-	bool m_IsRunning = true;
-	bool m_IsPaused	 = false;
+	GLFWwindow* m_Window	= nullptr;
+	bool m_IsPaused			= false;
+
+	bool InitWindow();
 };
