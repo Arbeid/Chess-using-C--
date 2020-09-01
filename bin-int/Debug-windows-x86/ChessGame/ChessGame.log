@@ -1,0 +1,5 @@
+﻿  Main.cpp
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+ChessApp.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'ChessApp.lib(glew.obj)' or at 'D:\Dev-C\Projects\Chess-using-C-\bin\Debug-windows-x86\ChessGame\vc120.pdb'; linking object as if no debug info
+  ChessGame.vcxproj -> D:\Dev-C\Projects\Chess-using-C-\ChessGame\..\bin\Debug-windows-x86\ChessGame\ChessGame.exe

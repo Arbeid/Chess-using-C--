@@ -24,8 +24,14 @@
 *.lai
 *.la
 *.a
-*.lib
 
 # Executables
 *.out
 *.app
+
+*.sln
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+
+
