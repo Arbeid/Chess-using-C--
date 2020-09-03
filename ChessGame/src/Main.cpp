@@ -25,7 +25,7 @@ int main()
 {
 	if (!glfwInit())
 	{
-		std::cerr << "[FATAL]: GLFW Failed to initialize.\n";
+		Log::Fatal("GLFW Failed to initialize.");
 		return 1;
 	}
 

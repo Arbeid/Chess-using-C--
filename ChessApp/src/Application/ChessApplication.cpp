@@ -4,12 +4,12 @@ ChessApp::ChessApp()
 {
 	if (!InitWindow())
 	{
-		std::cerr << "[FATAL]: Failed to create window.\n";
+		Log::Fatal("Failed to create window.");
 	}
 
 	if (GLenum e = glewInit() != GLEW_OK)
 	{
-		std::cerr << "[FATAL]: " << glewGetErrorString(e) << ".\n";
+		Log::GLFatal("Failed (glewInit)!.", e);
 	}
 }
 
@@ -22,8 +22,6 @@ void ChessApp::Run()
 {
 	while (!glfwWindowShouldClose(m_Window))
 	{
-		glClear(GL_COLOR_BUFFER_BIT);
-
 		switch (m_IsPaused)
 		{
 		case false:
@@ -33,7 +31,6 @@ void ChessApp::Run()
 			break;
 		}
 
-		glfwSwapBuffers(m_Window);
 		glfwPollEvents();
 	}
 }

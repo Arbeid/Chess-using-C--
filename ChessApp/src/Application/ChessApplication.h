@@ -4,6 +4,8 @@
 
 #include <iostream>
 
+#include "Logger\Log.h"
+
 class ChessApp
 {
 public:
