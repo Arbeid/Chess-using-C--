@@ -39,12 +39,12 @@ bool Mouse::IsRelease(int button)
 	return false;
 }
 
-bool Mouse::IsMove()
+bool Mouse::IsMove() noexcept
 {
 	return m_MouseMoved;
 }
 
-std::pair<double, double> Mouse::GetPos()
+std::pair<double, double> Mouse::GetPos() noexcept
 {
 	return { m_MousePosX, m_MousePosY };
 }

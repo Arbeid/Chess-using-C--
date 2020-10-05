@@ -25,11 +25,12 @@ public:
 	void PushRelease(int button);
 	void UpdatePos(double x, double y);
 
-	bool	IsPress(int button);
-	bool	IsRelease(int button);
-	bool	IsMove();
+	bool IsPress(int button);
+	bool IsRelease(int button);
 
-	std::pair<double, double> GetPos();
+	bool IsMove() noexcept;
+
+	std::pair<double, double> GetPos() noexcept;
 
 	void Clear() noexcept;
 private:

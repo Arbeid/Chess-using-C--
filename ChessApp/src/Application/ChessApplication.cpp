@@ -53,7 +53,7 @@ bool ChessApp::OnMouseMove()
 	return m_Mouse.IsMove();
 }
 
-std::pair<double, double> ChessApp::GetMousePos()
+std::pair<double, double> ChessApp::GetMousePos() noexcept
 {
 	return m_Mouse.GetPos();
 }
@@ -125,4 +125,21 @@ void ChessApp::InitCallbacks()
 
 	glfwSetCursorPosCallback(m_Window, MousePosCallback);
 	glfwSetMouseButtonCallback(m_Window, MouseButtonCallback);
+}
+
+///////////////////////////////////////////////////////////
+
+void SetClearColor(float r, float g, float b, float a)
+{
+	glClearColor(r, g, b, a);
+}
+
+void SwapFrame(GLFWwindow* window)
+{
+	glfwSwapBuffers(window);
+}
+
+void ClearFrame()
+{
+	glClear(GL_COLOR_BUFFER_BIT);
 }
